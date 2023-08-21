@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+    height: 95ch;
+    overflow-x: hidden;
+}
+.header{
+    height: 3rem;
+    display: flex;
+    position: sticky;
+}
+.navbar{
+    display: flex;
+    position: fixed;
+    border-radius: 1rem;
+    top: 0;
+    width: 100%;
+    background-color: rgb(64, 66, 66);
+}
+.navbar-left{
+    float: left;
+    margin-left: 3rem;
+    width: 80%;
+}
+.nav-links li{
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    justify-content: space-between;
+}
+.navbar-right{
+    width: 20%;
+    height: 3rem;
+    align-items: center;
+    display: flex;
+    justify-content: right;
+    margin-right: 3rem;
+}
+.navbar-right .lists{
+    text-align: right;
+}
+.lists .nav-links{
+    height: 3rem;
+    display: flex;
+    
+}
+.lists .nav-links li a{
+    padding: 0.12rem;
+    cursor: pointer;
+    color: aquamarine;
+    font-size: 1.11rem;
+}
+.lists .nav-links li a:hover{
+    cursor: pointer;
+    color: rgb(73, 255, 246);
+    border-radius: 0.3rem;
+    background-color: rgb(0, 0, 0);
+    /* font-size: 1.15rem; */
+}
+.nav-links li a{
+    text-decoration: none;
+    font-weight: 600;
+}
+.lists ul li,
+.navbar-right ul li
+{
+    list-style: none;
+    justify-content: space-between;
+}
+.lists ul{
+    align-items: center;
+}
+.lists ul li a{
+    /* list-style: none; */
+    justify-content: space-between;
+}
+#brand{
+    color: aqua;
+    font-size: 2rem;
+}
+.content{
+    margin: auto;
+    margin-bottom: 4rem;
+    max-width: 80%;
+    height: 78vh;
+    padding: 2rem;
+    border: 2px solid rgb(163, 158, 158);
+    font-size: 1.5rem;
+    text-align: justify;
+    overflow: scroll;
+    overflow-x: hidden;
+    border-radius: 1rem;
+    background-color: antiquewhite;
+}
+
+footer{
+    /* bottom: 0px; */
+    height: 2rem;
+    float: bottom;
+    bottom: 0;
+    display: flex;
+    background-color: rgb(41, 39, 39);
+    color: aqua;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    position: fixed;
+    justify-content: center;
+}
+.ftr{
+    text-align: center;
+    align-items: center;
+    display: block;
+}
+.toast{
+    overflow: hidden;
+    margin-right: 1rem;
+    position: absolute;
+    right: 1rem;
+    top: 4rem;
+    height: 4rem;
+    display: flex;
+    width: 34rem;
+    float: right;
+    padding: 0.5rem;
+    background-color: #bcffc6;
+    border-left: 3px solid green;
+    border-radius: 0.8rem;
+    margin:auto;
+    transform: translateX(calc(100% + 2rem));
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+    /* transition: all 1s cubic-bezier(0.95, 0.05, 0.795, 0.035); */
+    /* transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1); */
+    /* transition: all 1s cubic-bezier(1, 0, 0, 1); */
+}
+.toast.active{
+    transform: translateX(0%);
+}
+.toast .close{
+    position: absolute;
+    right: 0.8rem;
+    top: 0.6rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+.toast .close:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.toast .toast-content{
+    display: flex;
+    align-items: center;
+}
+.toast-content .message{
+    margin: 1rem;
+}
+.toast .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.2rem;
+    width: 100%;
+    background: rgb(253, 255, 253);
+}
+.toast .progress:before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: green;
+}
+.progress.active:before{
+    animation: progress 8s linear forwards;
+}
+@keyframes progress {
+    50%{
+        right: 100%;
+    }
+    100%{
+        right: 50%;
+    }
+}
+
+.toast-content .check{
+    margin-right: 0.5rem;
+    background-color: white;
+    color: green;
+    font-size: 1.43rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.23rem;
+    border: 2px solid green;
+    border-radius: 150%;
+
+}
