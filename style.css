@@ -79,13 +79,16 @@ body{
     /* list-style: none; */
     justify-content: space-between;
 }
-#brand{
+#brand a{
     color: aqua;
     font-size: 2rem;
+    cursor: pointer;
 }
 .content{
     margin: auto;
     margin-bottom: 4rem;
+    margin-top: 1.6rem;
+    margin-bottom: 2rem;
     max-width: 80%;
     height: 78vh;
     padding: 2rem;
@@ -118,7 +121,19 @@ footer{
     align-items: center;
     display: block;
 }
+<<<<<<< HEAD
 /* toast css */
+=======
+.ftr a{
+    text-decoration: none;
+    cursor: pointer;
+    color: aqua;
+}
+.ftr a:focus,
+.ftr a:hover{
+    color: rgb(2, 204, 204);
+}
+>>>>>>> feature1
 .toast{
     overflow: hidden;
     margin-right: 1rem;
