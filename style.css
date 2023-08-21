@@ -118,6 +118,7 @@ footer{
     align-items: center;
     display: block;
 }
+/* toast css */
 .toast{
     overflow: hidden;
     margin-right: 1rem;
